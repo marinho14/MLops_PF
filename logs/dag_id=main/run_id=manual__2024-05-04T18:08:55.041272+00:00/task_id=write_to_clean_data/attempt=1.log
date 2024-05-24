@@ -1,0 +1,16 @@
+[2024-05-04T18:09:13.997+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: main.write_to_clean_data manual__2024-05-04T18:08:55.041272+00:00 [queued]>
+[2024-05-04T18:09:14.001+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: main.write_to_clean_data manual__2024-05-04T18:08:55.041272+00:00 [queued]>
+[2024-05-04T18:09:14.002+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-05-04T18:09:14.007+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): write_to_clean_data> on 2024-05-04 18:08:55.041272+00:00
+[2024-05-04T18:09:14.012+0000] {standard_task_runner.py:57} INFO - Started process 89 to run task
+[2024-05-04T18:09:14.016+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'main', 'write_to_clean_data', 'manual__2024-05-04T18:08:55.041272+00:00', '--job-id', '164', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp87g87w4p']
+[2024-05-04T18:09:14.018+0000] {standard_task_runner.py:85} INFO - Job 164: Subtask write_to_clean_data
+[2024-05-04T18:09:14.052+0000] {task_command.py:415} INFO - Running <TaskInstance: main.write_to_clean_data manual__2024-05-04T18:08:55.041272+00:00 [running]> on host 7857cab168c2
+[2024-05-04T18:09:14.107+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='main' AIRFLOW_CTX_TASK_ID='write_to_clean_data' AIRFLOW_CTX_EXECUTION_DATE='2024-05-04T18:08:55.041272+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-04T18:08:55.041272+00:00'
+[2024-05-04T18:09:14.195+0000] {warnings.py:109} WARNING - /opt/***/dags/main.py:60: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, conn)
+
+[2024-05-04T18:09:22.496+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-05-04T18:09:22.536+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=main, task_id=write_to_clean_data, execution_date=20240504T180855, start_date=20240504T180913, end_date=20240504T180922
+[2024-05-04T18:09:22.642+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-05-04T18:09:22.697+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

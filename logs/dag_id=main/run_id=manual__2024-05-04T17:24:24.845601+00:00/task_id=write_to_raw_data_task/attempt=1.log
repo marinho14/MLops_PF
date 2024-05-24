@@ -1,0 +1,16 @@
+[2024-05-04T17:24:25.957+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: main.write_to_raw_data_task manual__2024-05-04T17:24:24.845601+00:00 [queued]>
+[2024-05-04T17:24:25.962+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: main.write_to_raw_data_task manual__2024-05-04T17:24:24.845601+00:00 [queued]>
+[2024-05-04T17:24:25.963+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-05-04T17:24:25.969+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): write_to_raw_data_task> on 2024-05-04 17:24:24.845601+00:00
+[2024-05-04T17:24:25.974+0000] {standard_task_runner.py:57} INFO - Started process 569 to run task
+[2024-05-04T17:24:25.978+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'main', 'write_to_raw_data_task', 'manual__2024-05-04T17:24:24.845601+00:00', '--job-id', '83', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmphree8zb8']
+[2024-05-04T17:24:25.981+0000] {standard_task_runner.py:85} INFO - Job 83: Subtask write_to_raw_data_task
+[2024-05-04T17:24:26.021+0000] {task_command.py:415} INFO - Running <TaskInstance: main.write_to_raw_data_task manual__2024-05-04T17:24:24.845601+00:00 [running]> on host 243a4ba842c9
+[2024-05-04T17:24:26.075+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='main' AIRFLOW_CTX_TASK_ID='write_to_raw_data_task' AIRFLOW_CTX_EXECUTION_DATE='2024-05-04T17:24:24.845601+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-04T17:24:24.845601+00:00'
+[2024-05-04T17:28:48.592+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-05-04T17:28:48.598+0000] {process_utils.py:131} INFO - Sending 15 to group 569. PIDs of all processes in the group: [569]
+[2024-05-04T17:28:48.598+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 569
+[2024-05-04T17:29:48.612+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=569, name='airflow task ru', status='sleeping', started='17:24:25') did not respond to SIGTERM. Trying SIGKILL
+[2024-05-04T17:29:48.633+0000] {process_utils.py:86} INFO - Sending the signal 9 to group 569
+[2024-05-04T17:29:48.689+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=569, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='17:24:25') (569) terminated with exit code -9
+[2024-05-04T17:29:48.692+0000] {standard_task_runner.py:172} ERROR - Job 83 was killed before it finished (likely due to running out of memory)

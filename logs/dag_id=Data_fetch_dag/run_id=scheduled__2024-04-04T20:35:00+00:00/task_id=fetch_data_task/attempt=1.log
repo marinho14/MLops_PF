@@ -1,0 +1,16 @@
+[2024-04-04T20:40:00.668+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Data_fetch_dag.fetch_data_task scheduled__2024-04-04T20:35:00+00:00 [queued]>
+[2024-04-04T20:40:00.674+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Data_fetch_dag.fetch_data_task scheduled__2024-04-04T20:35:00+00:00 [queued]>
+[2024-04-04T20:40:00.675+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 2
+[2024-04-04T20:40:00.682+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): fetch_data_task> on 2024-04-04 20:35:00+00:00
+[2024-04-04T20:40:00.691+0000] {standard_task_runner.py:57} INFO - Started process 1125 to run task
+[2024-04-04T20:40:00.694+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Data_fetch_dag', 'fetch_data_task', 'scheduled__2024-04-04T20:35:00+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/fetch_data.py', '--cfg-path', '/tmp/tmpvz439x2l']
+[2024-04-04T20:40:00.696+0000] {standard_task_runner.py:85} INFO - Job 23: Subtask fetch_data_task
+[2024-04-04T20:40:00.733+0000] {task_command.py:410} INFO - Running <TaskInstance: Data_fetch_dag.fetch_data_task scheduled__2024-04-04T20:35:00+00:00 [running]> on host d3322868cc0d
+[2024-04-04T20:40:00.899+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Data_fetch_dag' AIRFLOW_CTX_TASK_ID='fetch_data_task' AIRFLOW_CTX_EXECUTION_DATE='2024-04-04T20:35:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-04T20:35:00+00:00'
+[2024-04-04T20:40:01.414+0000] {authentication.py:66} INFO - package: mysql.connector.plugins
+[2024-04-04T20:40:01.415+0000] {authentication.py:67} INFO - plugin_name: caching_sha2_password
+[2024-04-04T20:40:01.416+0000] {authentication.py:71} INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+[2024-04-04T20:40:01.746+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-04-04T20:40:01.767+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=Data_fetch_dag, task_id=fetch_data_task, execution_date=20240404T203500, start_date=20240404T204000, end_date=20240404T204001
+[2024-04-04T20:40:01.802+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2024-04-04T20:40:01.815+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
